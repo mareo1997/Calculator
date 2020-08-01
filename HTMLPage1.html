@@ -9,12 +9,17 @@
 </head>
 <body>
     <p id="display">Display: 0</p><br>
+    <p id="x">Display: 0</p><br>
+    <p id="c">Calc stack: 0</p><br>
 
-    <button id="add" onclick="">+</button>
-    <button id="sbu" onclick="">-</button>
-    <button id="mul" onclick="">*</button>
-    <button id="div" onclick="">/</button>
-    <button id="eql" onclick="">=</button><br><br>
+
+    <button id="add" onclick="number('add')">+</button>
+    <button id="sub" onclick="number('sub')">-</button>
+    <button id="mul" onclick="number('mul')">*</button>
+    <button id="div" onclick="number('div')">/</button>
+    <button id="eql" onclick="number('eql')">=</button>
+    <button id="clr" onclick="number('clr')">Clear</button>
+    <br><br>
 
     <button id="#1" onclick="number(1)">1</button>
     <button id="#2" onclick="number(2)">2</button>
