@@ -1,3 +1,38 @@
-﻿body
-{
+﻿.display {
+    color: black;
+    padding: 10px 220px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.ref-grid {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.ref-container {
+    font-size: 30px;
+    text-align: left;
+    grid-template-rows: auto auto auto auto auto;
+}
+
+.ref {
+    font-weight: bold;
+}
+
+.clr {
+    padding: 10px 220px;
 }

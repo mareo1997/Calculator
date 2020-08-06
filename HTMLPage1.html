@@ -8,27 +8,38 @@
     <link rel="stylesheet" href="StyleSheet1.css">
 </head>
 <body>
-    <p id="display">Display: 0</p><br>
+    <div class="display" id="display">Display: 0</div>
+    <div class="ref-grid">
+        <div class="ref-container">
+            <p class="ref">
+                <button id="add" onclick="Calculation('+')">+</button>
+                <button id="sub" onclick="Calculation('-')">-</button>
+                <button id="mul" onclick="Calculation('*')">*</button>
+                <button id="div" onclick="Calculation('/')">/</button>
+                <button id="eql" onclick="Calculation('=')">=</button>
+            </p>
+        </div>
+        <div class="ref-container">
+            <p class="ref">
+                <button id="1" onclick="Calculation(1)">1</button>
+                <button id="2" onclick="Calculation(2)">2</button>
+                <button id="3" onclick="Calculation(3)">3</button>
+                <button id="4" onclick="Calculation(4)">4</button>
+                <button id="5" onclick="Calculation(5)">5</button>
+            </p>
+        </div>
+        <div class="ref-container">
+            <p class="ref">
+                <button id="6" onclick="Calculation(6)">6</button>
+                <button id="7" onclick="Calculation(7)">7</button>
+                <button id="8" onclick="Calculation(8)">8</button>
+                <button id="9" onclick="Calculation(9)">9</button>
+                <button id="0" onclick="Calculation(0)">0</button>
+            </p>
+        </div>
+    </div>
 
-    <button id="+" onclick="Calculation('+')">+</button>
-    <button id="sub" onclick="Calculation('-')">-</button>
-    <button id="mul" onclick="Calculation('*')">*</button>
-    <button id="div" onclick="Calculation('/')">/</button>
-    <button id="=" onclick="Calculation('=')">=</button>
-    <button id="clr" onclick="Calculation('clr')">Clear</button>
-    <br><br>
-
-    <button id="#1" onclick="Calculation(1)">1</button>
-    <button id="#2" onclick="Calculation(2)">2</button>
-    <button id="#3" onclick="Calculation(3)">3</button>
-    <button id="#4" onclick="Calculation(4)">4</button>
-    <button id="#5" onclick="Calculation(5)">5</button>
-    <br><br>
-    <button id="#6" onclick="Calculation(6)">6</button>
-    <button id="#7" onclick="Calculation(7)">7</button>
-    <button id="#8" onclick="Calculation(8)">8</button>
-    <button id="#9" onclick="Calculation(9)">9</button>
-    <button id="#0" onclick="Calculation(0)">0</button>
+    <button class="clr" onclick="Calculation('clr')">Clear</button>
 
     <p id="c">Calc stack: 0</p><br>
     <p id="x">Display: 0</p><br>
