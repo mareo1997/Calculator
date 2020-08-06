@@ -5,32 +5,33 @@
     <meta charset="utf-8" />
     <title>Simple Calculator</title>
     <script type="text/javascript" src="Script1.js"></script>
-    <style type="text/css" src="StyleSheets.css"></style>
+    <link rel="stylesheet" href="StyleSheet1.css">
 </head>
 <body>
     <p id="display">Display: 0</p><br>
-    <p id="x">Display: 0</p><br>
-    <p id="c">Calc stack: 0</p><br>
 
-
-    <button id="add" onclick="number('add')">+</button>
-    <button id="sub" onclick="number('sub')">-</button>
-    <button id="mul" onclick="number('mul')">*</button>
-    <button id="div" onclick="number('div')">/</button>
-    <button id="eql" onclick="number('eql')">=</button>
-    <button id="clr" onclick="number('clr')">Clear</button>
+    <button id="+" onclick="Calculation('+')">+</button>
+    <button id="sub" onclick="Calculation('-')">-</button>
+    <button id="mul" onclick="Calculation('*')">*</button>
+    <button id="div" onclick="Calculation('/')">/</button>
+    <button id="=" onclick="Calculation('=')">=</button>
+    <button id="clr" onclick="Calculation('clr')">Clear</button>
     <br><br>
 
-    <button id="#1" onclick="number(1)">1</button>
-    <button id="#2" onclick="number(2)">2</button>
-    <button id="#3" onclick="number(3)">3</button>
-    <button id="#4" onclick="number(4)">4</button>
-    <button id="#5" onclick="number(5)">5</button>
-    <button id="#6" onclick="number(6)">6</button>
-    <button id="#7" onclick="number(7)">7</button>
-    <button id="#8" onclick="number(8)">8</button>
-    <button id="#9" onclick="number(9)">9</button>
-    <button id="#0" onclick="number(0)">0</button>
+    <button id="#1" onclick="Calculation(1)">1</button>
+    <button id="#2" onclick="Calculation(2)">2</button>
+    <button id="#3" onclick="Calculation(3)">3</button>
+    <button id="#4" onclick="Calculation(4)">4</button>
+    <button id="#5" onclick="Calculation(5)">5</button>
+    <br><br>
+    <button id="#6" onclick="Calculation(6)">6</button>
+    <button id="#7" onclick="Calculation(7)">7</button>
+    <button id="#8" onclick="Calculation(8)">8</button>
+    <button id="#9" onclick="Calculation(9)">9</button>
+    <button id="#0" onclick="Calculation(0)">0</button>
+
+    <p id="c">Calc stack: 0</p><br>
+    <p id="x">Display: 0</p><br>
 
 </body>
 </html>

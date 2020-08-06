@@ -6,7 +6,57 @@ var num1; //12
 var num2;//13
 var calc = [];
 
-function number(clicked) {
+function Calculation(click) {
+    if (typeof click == 'number') {
+        number(click);
+    } else if (click == 'clr') {
+        clear(click);
+    } else {
+        math(click);
+    }
+}
+
+function number(num) {
+    if (total != undefined) {
+        calc = [];
+        x.push(num);
+        document.getElementById("x").innerHTML = x;
+        display = Number(x.join(''));
+        document.getElementById("display").innerHTML = display;
+        //document.getElementById("c").innerHTML = "new num";
+    } else {
+        x.push(num);
+        document.getElementById("x").innerHTML = x;
+        display = Number(x.join(''));
+        document.getElementById("display").innerHTML = display;
+    }
+}
+
+function math(symbol) {
+    calc.push(display);
+    if (symbol == '+') {
+        calc.push('+');
+        document.getElementById("c").innerHTML = calc;
+    } else if (symbol == '=') {
+        eql();
+    }
+    x = [];
+    document.getElementById("x").innerHTML = x;
+}
+
+function eql() {
+    if (calc[1] == '+') {
+        total = calc[0] + calc[2];
+    }
+    document.getElementById("display").innerHTML = total;
+    calc[0] = total;
+    x = [];
+    calc.pop();
+    calc.pop();
+    document.getElementById("c").innerHTML = calc;
+}
+
+/*function number(clicked) {
     if (typeof clicked == 'number') {
         x.push(clicked);
         document.getElementById("x").innerHTML = x;
@@ -31,9 +81,8 @@ function number(clicked) {
     } else if (clicked == 'clr'){
         clear();
     }
-}
-
-function add() {
+}*/
+/*function add() {
     if (calc[0] == undefined) {
         calc.push(display);
         calc.push('+');
@@ -72,10 +121,10 @@ function eql() {
     calc.pop();
     calc.pop();
     document.getElementById("c").innerHTML = calc;
-}
+}*/
 
 function clear() {
     calc = [];
     x = [];
-    document.getElementById("display").innerHTML = "Cleared";
+    document.getElementById("display").innerHTML = "Display: 0";
 }
