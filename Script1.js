@@ -6,6 +6,71 @@ var num1; //12
 var num2;//13
 var calc = [];
 
+function Calculation(click) {
+    if (typeof click == 'number') {
+        number(click);
+    } else if (click == 'clr') {
+        clear(click);
+    } else {
+        math(click);
+    }
+}
+
+function number(num) {
+    if (total != undefined) {
+        total = null;
+        calc = [];
+        x.push(num);
+        document.getElementById("x").innerHTML = x;
+        display = Number(x.join(''));
+        document.getElementById("display").innerHTML = "Display: " + display;
+        //document.getElementById("c").innerHTML = "new num";
+    } else {
+        x.push(num);
+        document.getElementById("x").innerHTML = x;
+        display = Number(x.join(''));
+        document.getElementById("display").innerHTML = "Display: " + display;
+    }
+}
+
+function math(symbol) {
+    calc.push(display);
+    if (total != undefined) {
+        calc.pop();
+        if (symbol == '+') {
+            calc.push('+');
+            document.getElementById("c").innerHTML = "Calc:" + calc;
+        } else if (symbol == '*') {
+            calc.push('*');
+            document.getElementById("c").innerHTML = "Calc:" + calc;
+        }
+    } else if (symbol == '=') {
+        eql();
+    } else {
+        if (symbol == '+') {
+            calc.push('+');
+            document.getElementById("c").innerHTML = "Calc:" + calc;
+        }
+    } 
+    x = [];
+    document.getElementById("x").innerHTML = x;
+}
+
+function eql() {
+    /*if (total != undefined) {
+        calc.push(display);
+    }*/
+    if (calc[1] == '+') {
+        total = calc[0] + calc[2];
+    }
+    document.getElementById("display").innerHTML = total;
+    calc[0] = total;
+    x = [];
+    calc.pop();
+    calc.pop();
+    document.getElementById("c").innerHTML = "Calc:" + calc;
+}
+/*
 function number(clicked) {
     if (typeof clicked == 'number') {
         x.push(clicked);
@@ -72,10 +137,11 @@ function eql() {
     calc.pop();
     calc.pop();
     document.getElementById("c").innerHTML = calc;
-}
+}*/
 
 function clear() {
     calc = [];
     x = [];
+    total = null;
     document.getElementById("display").innerHTML = "Cleared";
 }
